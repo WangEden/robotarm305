@@ -44,6 +44,7 @@
       </geometry>
     </collision>
   </link>
+
   <link
     name="Shoulder">
     <inertial>
@@ -84,6 +85,7 @@
       </geometry>
     </collision>
   </link>
+  
   <joint
     name="JointBase"
     type="revolute">
@@ -102,6 +104,7 @@
       effort="100"
       velocity="1" />
   </joint>
+  
   <link
     name="ArmBottom">
     <inertial>
@@ -142,6 +145,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint
     name="JointShoulder"
     type="revolute">
@@ -160,6 +164,7 @@
       effort="100"
       velocity="1" />
   </joint>
+
   <link
     name="ArmTop">
     <inertial>
@@ -200,6 +205,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint
     name="JointElbow"
     type="revolute">
@@ -218,6 +224,7 @@
       effort="100"
       velocity="1" />
   </joint>
+
   <link
     name="Hand">
     <inertial>
@@ -258,6 +265,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint
     name="JointWrist"
     type="revolute">
@@ -276,4 +284,5 @@
       effort="100"
       velocity="1" />
   </joint>
+  
 </robot>
