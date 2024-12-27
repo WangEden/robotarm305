@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/eden/Project/catkin_ws/install/setup.sh

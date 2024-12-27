@@ -1,0 +1,8 @@
+prefix=/home/eden/Project/catkin_ws/devel
+
+Name: robotarm305
+Description: Description of robotarm305
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

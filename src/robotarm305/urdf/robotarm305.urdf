@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robotarm305">
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="-7.0563E-06 -0.020678 -2.8727E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.1646" />
+      <inertia
+        ixx="9.5863E-05"
+        ixy="-4.287E-08"
+        ixz="3.5756E-09"
+        iyy="0.00014529"
+        iyz="-4.9954E-10"
+        izz="9.5864E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Shoulder">
+    <inertial>
+      <origin
+        xyz="-0.00099059 0.033999 -0.0016103"
+        rpy="0 0 0" />
+      <mass
+        value="0.15467" />
+      <inertia
+        ixx="7.7379E-05"
+        ixy="7.2803E-08"
+        ixz="8.6271E-06"
+        iyy="7.9774E-05"
+        iyz="4.2917E-07"
+        izz="8.8308E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JointBase"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0061"
+      rpy="1.5708 0 -2.0763" />
+    <parent
+      link="Base" />
+    <child
+      link="Shoulder" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="ArmBottom">
+    <inertial>
+      <origin
+        xyz="0.094217 0.023666 6.9959E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.18907" />
+      <inertia
+        ixx="5.8788E-05"
+        ixy="-1.3037E-05"
+        ixz="4.9404E-09"
+        iyy="0.00029199"
+        iyz="-3.521E-08"
+        izz="0.00028308" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/ArmBottom.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/ArmBottom.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JointShoulder"
+    type="revolute">
+    <origin
+      xyz="-0.010216 0.041586 -0.018458"
+      rpy="-1.0657 -4.6918E-05 1.5709" />
+    <parent
+      link="Shoulder" />
+    <child
+      link="ArmBottom" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.06"
+      upper="2.06"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="ArmTop">
+    <inertial>
+      <origin
+        xyz="0.094113 0.02399 -8.0082E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.18907" />
+      <inertia
+        ixx="5.8788E-05"
+        ixy="-1.3038E-05"
+        ixz="4.9411E-09"
+        iyy="0.00029199"
+        iyz="3.5294E-08"
+        izz="0.00028308" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/ArmTop.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/ArmTop.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JointElbow"
+    type="revolute">
+    <origin
+      xyz="0.129 0.0054486 0"
+      rpy="3.1416 -0.00036407 0" />
+    <parent
+      link="ArmBottom" />
+    <child
+      link="ArmTop" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.618"
+      upper="2.618"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="Hand">
+    <inertial>
+      <origin
+        xyz="-0.0074669 0.028784 0.19444"
+        rpy="0 0 0" />
+      <mass
+        value="0.74698" />
+      <inertia
+        ixx="0.015163"
+        ixy="0.0016912"
+        ixz="0.00059805"
+        iyy="0.010668"
+        iyz="-0.0019466"
+        izz="0.0061318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/Hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotarm305/meshes/Hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JointWrist"
+    type="revolute">
+    <origin
+      xyz="0.129 0.0060549 0"
+      rpy="-3.1416 -1.5703 3.1416" />
+    <parent
+      link="ArmTop" />
+    <child
+      link="Hand" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="100"
+      velocity="1" />
+  </joint>
+</robot>
