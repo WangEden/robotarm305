@@ -70,7 +70,7 @@ sudo apt-get install xfce4-terminal
 
 **确定DH参数（即$\alpha_i,~a_i,~\theta_i,~d_i$）**
 机械臂模型及坐标系如下标识：
-<img src="./assets/Pasted image 20250212044818.png.png" alt="Pasted image 20250212044818.png" style="zoom: 33%;" />
+<img src="./assets/Pasted image 20250212044818.png" alt="Pasted image 20250212044818.png" style="zoom: 33%;" />
 
 正向转动：按右手螺旋定则
 $\alpha_i$ 为绕$\hat{X}_i$ 轴从$\hat{Z}_i$ 到$\hat{Z}_{i+1}$ 的转角，绕$\hat{X}_i$ 正向转动方向为正；
