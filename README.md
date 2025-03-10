@@ -91,12 +91,16 @@ D-H表如下：
 | shoulder |  2  | $\pi \over 2$ |   0    | $\theta_2$ | 48.1  |
 |  elbow   |  3  |       0       | 128.93 | $\theta_3$ |   0   |
 |  wrist   |  4  |       0       |  129   | $\theta_4$ | 48.55 |
-其中$$\begin{align}
+
+其中
+$$
+\begin{align}
 \theta_1&=\Delta\theta_1 \\
 \theta_2&={\pi\over2}+\Delta\theta_2 \\
 \theta_3&=\Delta\theta_3 \\
 \theta_2&=-{\pi\over2}+\Delta\theta_2 \\
-\end{align}$$
+\end{align}
+$$
 即坐标计算时，相对于电机目标旋转角度有一个初始值；
 
 **计算D-H变换矩阵**
